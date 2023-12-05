@@ -40,3 +40,281 @@
 .read-the-docs {
   color: #888;
 }
+
+.body {
+  background-color: lightgreen;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+  display: inline-block; /* Use inline-block to size the container based on content */
+  align-items: center;
+  padding: 10px; /* Add padding for spacing inside the container */
+  
+}
+ 
+  
+  
+
+.app-div {
+  background-color: green; /* Set your desired background color */
+  height: 10cm; /* Set your desired height, 'vh' stands for viewport height */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border-color: aliceblue;
+}
+
+
+.control-button {
+  background-color: none; /* Green */ 
+  border: none; 
+  opacity: 0.8;
+  cursor: pointer;
+  align-items: left;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+
+}
+.button{
+cursor: pointer;
+margin: 2px; /* Adjust the margin value as needed for space around the button */
+border-radius: 5px;
+background-color: lightgreen;
+transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color:yellow;
+}
+
+.control-button:hover {
+  background-color:yellow;
+}
+/* App.css */
+
+.playback-control {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content:center;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+} 
+
+.now-playing {
+  font-size: 15px;
+  color:#333;
+  font-family: 'Arial', sans-serif;
+}
+ 
+.track-name {
+  font-size: 15px;
+  font-family: 'Arial', sans-serif;
+}
+ 
+.blue-details {
+  font-size: 14px; /* Adjust the font size based on your design */
+  color: #3498db; /* Blue color, you can change it to your preferred color */
+  font-family: 'Arial', sans-serif; /* Use a preferred font or 'sans-serif' as a fallback */
+}
+  
+
+/* App.css */
+
+/* App.css */
+
+.slider {
+  width: 60%; /* Adjust the width as needed */
+  margin:auto; /* Center the progress bar horizontally */
+}
+
+.progressbar {
+  width: 60%;
+  height: 5px;
+  appearance: none;
+  background: #d3d3d3; /* Set the background color */
+  outline: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.progressbar::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4CAF50; /* Set the thumb color */
+  cursor: pointer;
+}
+
+.progressbar::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4CAF50; /* Set the thumb color for Firefox */
+  cursor: pointer;
+}
+
+
+
+/* Current time and duration styles */
+.playback-control div {
+  font-size: 14px;
+  color: #666; /* Adjust color as needed */
+}
+/* Add the following styles to your existing CSS */
+
+.volume-container {
+  display: flex;
+  align-items:center;
+  flex-direction: row;
+}
+
+.volumediv {
+  position:absolute;
+}
+
+
+.lowVolume,
+.HighVolume {
+  position:sticky;
+  background-color: grey;
+}
+
+.lowVolume {
+  bottom:-70px; /* Adjust distance from the bottom */
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.HighVolume {
+  top: -1px; /* Adjust distance from the top */
+  opacity: 0.8;
+  cursor: pointer;
+}
+.mute {
+  top: -5px; /* Adjust distance from the top */
+  opacity: 0.8;
+  cursor: pointer;
+  
+}
+/* Styling for the icons */
+.lowVolume svg,
+.HighVolume svg {
+  font-size: 24px; /* Adjust font size as needed */
+}
+.album-art {
+  width: 150px; /* Adjust the width based on your design */
+  height: 150px; /* Adjust the height based on your design */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+  transition: transform 0.3s ease; /* Add a smooth transition effect on hover */
+}
+
+.album-art:hover {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+}
+.bodi {
+  background-color: lightgreen;
+  border-radius: 10px;
+  padding: 20px;
+  display: inline-block; /* Use inline-block to size the container based on content */
+  align-items: center;
+}
+
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.device-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color:#333;
+  font-family: 'Arial', sans-serif;
+  
+}
+
+.device-label {
+  margin-right: 10px;
+  font-size: 16px; /* Adjust the font size based on your design */
+  color: #333; /* Adjust the color based on your design */
+}
+
+.device-radio {
+  cursor: pointer;
+}
+
+.back-button {
+cursor: pointer;
+margin: 2px; /* Adjust the margin value as needed for space around the button */
+border-radius: 5px;
+background-color: lightgreen;
+transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: yellow;
+}
+.playbackcontrol {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: lightgreen;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity:  0.9;
+}
+
+.current-time,
+.duration {
+  font-size: 14px;
+  color: #555;
+}
+
+.slider {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.progressbar {
+  width: 100%;
+  height: 8px;
+  appearance: none;
+  background-color: #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.progressbar::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #3498db;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progressbar::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
