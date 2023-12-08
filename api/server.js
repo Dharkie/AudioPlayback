@@ -41,7 +41,7 @@ app.put('/api/volume', (req, res) => {
       const json = JSON.parse(data);
       json.volume = Number(req.body.volume);
       console.log(json.volume)
-      fsp.writeFile('./data.json', JSON.stringify(json))
+      fsp.writeFile('./data.json', JSON.stringify(json, null, 2))
         .then(() => {
           res.send({ volume: Number(req.body.volume) });
         })
@@ -95,6 +95,19 @@ const handleError = (err, req, res, next) => {
 
 
 {/*SELECT DEVICE BY ID*/}
+app.get('/api/bluetooth/connected', async (req, res) => {
+  // const {id: songId}=req.params;
+  try{
+    const data = await fsp.readFile('./data.json')
+    const jsonData= JSON.parse(data);
+    res.send({connected: jsonData.bluetooth.connected});
+
+}
+catch (err){
+  console.error('Error fiinding song:', err);
+    res.status(500).send('Internal Server Error');
+}
+});
 
 app.put('/api/bluetooth/connected', async (req, res) => {
   const { deviceId } = req.body;
@@ -115,9 +128,9 @@ app.put('/api/bluetooth/connected', async (req, res) => {
     const foundDevice=jsonData.bluetooth.devices.find(device => device.id === Number(deviceId));
 
     // Write the updated data back to the file
-    await fsp.writeFile('./data.json', JSON.stringify(jsonData));
+    await fsp.writeFile('./data.json', JSON.stringify(jsonData, null, 2));
 
-    res.json({ blue: foundDevice.name });
+    res.json({ blue: foundDevice.name, id: foundDevice.id});
   } 
   catch (error) {
     console.error('Error updating connected device:', error);

@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import { MdOutlinePlayCircleFilled } from "react-icons/md"
 import { TbPlayerPauseFilled } from "react-icons/tb";
 import { LuListRestart } from "react-icons/lu";
+import { FaBluetooth } from "react-icons/fa";
 import { IoStopCircle } from "react-icons/io5";
 import { FaFastForward } from "react-icons/fa";
 import { FaFastBackward } from "react-icons/fa";
@@ -175,7 +176,7 @@ const navtoBluetooth =()=>
   <div className='blue-details'>Bluetooth: N/A</div>
 )}
 
-        <button className= "button" onClick={()=>{navtoBluetooth()}}>Bluetooth Devices</button>  
+        <button className= "button" onClick={()=>{navtoBluetooth()}}><FaBluetooth /></button>  
         <div>
         <img src={currentSong.albumArt} alt="Album Art" className='album-art'/>
         </div>

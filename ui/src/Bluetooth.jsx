@@ -10,14 +10,16 @@ const Bluetooth =() =>{
     {/* STATES DECLARATION*/}
     const [bluetooth, setbluetoothdevices]=useState([])
     const [bluetoothDevices, setBluetoothDevices] = useState([]);
-    const [selectedDevice, setSelectedDevice] = useState(null);
-    const [connectedevice, setconnectedevice]=useState([])
+    const [selectedDevice, setSelectedDevice] = useState('');
+    const [connectedevice, setconnectedevice]=useState()
     const navigate = useNavigate();
 
 
     {/* USing the state property of navigation to pass information to another component*/}
     const backtoMainPage =()=>
     {
+        //localStorage.setItem('selectedDevice', selectedDevice);
+        //updateConnectedDevice(Number(selectedDevice))
         navigate('/', {state:{connectedevice}})
     }//eo renderDevices::
 
@@ -26,7 +28,9 @@ const Bluetooth =() =>{
       try {
         const response = await axios.get('/api/bluetooth');
         setBluetoothDevices(response.data);
-        
+        /*const newResp = await axios.get('api/bluetooth/connected');
+        setconnectedevice(newResp.data.connected)
+        */
         console.log(response.data)
       } catch (error) {
         console.error('Error fetching Bluetooth devices:', error);
@@ -37,13 +41,16 @@ const Bluetooth =() =>{
 
     {/* Run on first mount*/}
     useEffect(()=>{
+        //setSelectedDevice(localStorage.getItem('selectedDevice') || '');
         fetchBluetoothDevices();
+        
     },[])
 
 
 {/*Handle selecting a Bluetooth device */} 
   const handleDeviceSelect = (deviceId) => {
     setSelectedDevice(deviceId);
+    localStorage.setItem('selectedDevice', deviceId);
     updateConnectedDevice(deviceId);// Update the connected device using the PUT request
   };
   {/*End of Handle selecting a Bluetooth device */}
@@ -54,7 +61,7 @@ const Bluetooth =() =>{
     try {
       const resp = await axios.put('/api/bluetooth/connected', { deviceId });
       setconnectedevice(resp.data)
-      console.log(connectedevice.blue);
+      console.log(`${connectedevice.blue}, ${connectedevice.id}`);
     } catch (error) {
       console.error('Error updating connected device:', error);
     }
@@ -75,7 +82,7 @@ const Bluetooth =() =>{
               id={`device-${device.id}`}
               name='bluetoothDevices'
               value={device.id}
-              checked={selectedDevice === device.id}
+              checked={selectedDevice == device.id}
               onChange={() => handleDeviceSelect(device.id)}
               className='device-radio'
             />
