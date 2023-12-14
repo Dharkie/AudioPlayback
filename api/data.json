@@ -1,0 +1,96 @@
+{
+  "volume": 80,
+  "bluetooth": {
+    "devices": [
+      {
+        "id": 1,
+        "name": "s22"
+      },
+      {
+        "id": 2,
+        "name": "iphone22s"
+      },
+      {
+        "id": 3,
+        "name": "DharkiesPad"
+      },
+      {
+        "id": 4,
+        "name": "mYbrain"
+      },
+      {
+        "id": 5,
+        "name": "Jesus"
+      },
+      {
+        "id": 6,
+        "name": "Iam"
+      }
+    ],
+    "connected": 5
+  },
+  "records": {
+    "playlist": [
+      {
+        "id": 1,
+        "title": "Brainless",
+        "artist": "Eminem",
+        "albumArt": "https://cdn11.bigcommerce.com/s-8e25iavqdi/images/stencil/1280x1280/products/111802/128789/the-marshall-mathers-lp-2-2-cover-art-sticker-ACF040005__84964.1650879750.jpg?c=2"
+      },
+      {
+        "id": 2,
+        "title": "Darkness",
+        "artist": "Eminem",
+        "albumArt": "https://www.crownnote.com/sites/default/files/styles/large/public/darkness_0.jpg.webp?itok=xa4K2i5O"
+      },
+      {
+        "id": 3,
+        "title": "Brosky",
+        "artist": "Lucas Joyner",
+        "albumArt": "https://cdns-images.dzcdn.net/images/cover/3ee055b7be7c72cb9aea540b987f3cd8/500x500-000000-80-0-0.jpg"
+      },
+      {
+        "id": 4,
+        "title": " The Way Instrumental",
+        "artist": "Zack Hemsey",
+        "albumArt": "https://ia600800.us.archive.org/25/items/ZHthewayFLAC/Cover.jpg?cnt=0"
+      },
+      {
+        "id": 5,
+        "title": "J.cole",
+        "artist": " Love Yours",
+        "albumArt": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*pnTPMu3UkwDUbd5r.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Remember me",
+        "artist": " Thomas J. Bergerson",
+        "albumArt": "https://upload.wikimedia.org/wikipedia/en/1/15/TJB-Illusions-Jesper-Krijgsman.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Time",
+        "artist": " Hans Zimmer",
+        "albumArt": "https://assets.audiomack.com/micah-bratt/b9860ebf32445a020a1b1e1b81f8b349.jpeg?width=600"
+      },
+      {
+        "id": 8,
+        "title": "The Godfather Theme Song",
+        "artist": "The Danish National Symphony orchestral Suite",
+        "albumArt": "https://i.ytimg.com/vi/X-jdl9hcCeg/maxresdefault.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Bamboo Flute",
+        "artist": "Beautiful Chinese Music",
+        "albumArt": "https://i1.sndcdn.com/artworks-000045138753-2ror1k-t500x500.jpg"
+      },
+      {
+        "id": 10,
+        "title": "Legacy",
+        "artist": " Eminem",
+        "albumArt": "https://pbs.twimg.com/media/ESXI3bXX0AUb0ev.jpg"
+      }
+    ]
+  }
+}
